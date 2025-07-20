@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Data Science Portfolio</title>
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -19,26 +23,34 @@
         header {
             background: #333;
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
+            padding: 20px 0;
             border-bottom: #77aaff 3px solid;
         }
-        header a {
+        nav ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav li {
+            display: inline;
+        }
+        nav a {
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 16px;
+            font-size: 14px;
         }
-        header ul {
-            padding: 0;
-            list-style: none;
+        nav a:hover {
+            text-decoration: underline;
         }
-        header li {
-            display: inline;
-            padding: 0 20px 0 20px;
+        section {
+            padding: 40px 0;
         }
-        .projects {
-            margin: 20px 0;
+        h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
         }
         .project {
             background: #fff;
@@ -59,15 +71,36 @@
     </style>
 </head>
 <body>
+
     <header>
         <div class="container">
             <h1>My Data Science Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
+
     <div class="container">
-        <section class="projects">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a data science enthusiast with experience across predictive modeling, visualization, and storytelling. I enjoy tackling complex problems and crafting clear, actionable insights using tools like Python, Power BI, and SQL. This portfolio highlights some of my most meaningful work.</p>
+        </section>
+		
+        <section id="contact">
+            <h2>Contact Info</h2>
+            <p>Email: <a href="mailto:[placeholder]">lukesyverson@domain.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/lukesyverson/" target="_blank">linkedin.com/in/yourprofile</a></p>
+            <p>GitHub: <a href="https://github.com/LukeSyverson" target="_blank">github.com/LukeSyverson</a></p>
+        </section>
+
+        <section id="projects" class="projects">
             <h2>Projects</h2>
-            <div class="project">
+			<div class="project">
                 <h3><a href="https://github.com/LukeSyverson/DataSciencePortfolio/tree/main/ChildcareAffordabilityProject" target="_blank">Childcare Affordability Regional Indexing and Prediction Project</a></h3>
                 <p>A data engineering, modeling, and machine learning project seeking to provide meaningful insights to policy makers on the contributing factors behind regional childcare affordability.</p>
             </div>
@@ -108,6 +141,8 @@
                 <p>A movie search input featuring fuzzy matching against a small movies dataset.</p>
             </div>
         </section>
+
     </div>
+
 </body>
 </html>
